@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-     withSonarQubeEnv(installationName: 'SonarQube Server', credentialsId: 'Sonarqube Server') {
+     withSonarQubeEnv(installationName: 'SonarQube Server', credentialsId: 'aef1ef4f-853f-464b-9430-6f25629a5314') {
       sh 'mvn clean package sonar:sonar'
     }
   }
