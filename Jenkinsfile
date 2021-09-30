@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube Analysis') {
      withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'aef1ef4f-853f-464b-9430-6f25629a5314') {
-      sh 'mvn clean package sonar:sonar'
+      sh '/opt/apache-maven-3.8.2/bin/mvn clean package sonar:sonar'
     }
   }
 }
