@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frotend-app
+  labels:
+    app: frontend-app
+    type: demo-votingapp
+
+spec:
+  containers:
+    - name: voting-app
+      image: dockersamples/vote
+      ports:
+        - 80
